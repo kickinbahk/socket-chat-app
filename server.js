@@ -26,7 +26,7 @@ function sendCurrentUsers (socket) {
   })
   socket.emit('message', {
     name: 'System',
-    text: `Current users: ${users.join(', ')}`
+    text: `<em>Current users: <strong>${users.join(', ')}</strong></em> `
   })
 }
 
