@@ -20,8 +20,9 @@ socket.on('message', function (message) {
   console.log('New Message:')
   console.log(message.text)
 
-  $message.append(`<p><strong>${message.name} ${momentTimestamp.local().format('h:mm:a')}:</strong></p>`)
-  $message.append(`<p>${message.text}</p>`)
+  $message.append(
+    `<p><em>${momentTimestamp.local().format('h:mma')}</em> <strong>${message.name}</strong>: ${message.text}</p>`)
+
 })
 
 // New message submission
