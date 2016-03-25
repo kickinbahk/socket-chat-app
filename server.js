@@ -13,7 +13,6 @@ io.on('connection', function (socket) {
   socket.on('message', function (message) {
     console.log(`Message received: ${message.text}`)
     message.timestamp = moment().valueOf()
-    console.log(message)
     io.emit('message', message)
   })
 
