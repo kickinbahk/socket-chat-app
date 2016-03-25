@@ -6,20 +6,34 @@
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   </head>
   <body>
-  <h1>Join Chat</h1>
+    <h1 class="jumbotron text-center">Join Chat</h1>
 
-  <form action="/chat.html">
-    <label>User Name: </label>
-    <input type="text" placeholder="i.e. Obi-Wan" name="name" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+          <form action="/chat.html">
+            <div class="form-group">
+              <label>User Name: </label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" placeholder="i.e. Obi-Wan" name="name" class="form-control" />
+              </div>
+            </div>
 
-    <br />
-    <br />
-
-    <label>Room Name: </label>
-    <input type="text" placeholder="i.e. Star Wars Fans" name="room" />
-
-    <input type="submit" value='Join Chat' />
-  </form>
+            <div class="form-group">
+              <label>Room Name: </label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                <input type="text" placeholder="i.e. Star Wars Fans" name="room" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" value='Join Chat' class="btn btn-success pull-right" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
