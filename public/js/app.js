@@ -1,5 +1,5 @@
 var room = getQueryVariable('room')
-var name = getQueryVariable('name')
+var name = getQueryVariable('name') || 'Anonymous'
 var socket = io()
 
 console.log(`${name} wants to join ${room}`)
