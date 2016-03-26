@@ -1,3 +1,6 @@
 .top-padding {
   margin-top: 10%;
 }
+.messages p {
+  margin: 6px 0;
+}
