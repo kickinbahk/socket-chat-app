@@ -3,18 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <title>Socket Basics</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
   </head>
   <body>
-  <h1 class="room-title"><!-- This is for the Room Name --></h1>
-    <p><a href="/index.html">Change Username or Room</a></p>
-    <div class="messages">
-      <!-- Received Messages Here -->
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="room-title jumbotron text-center"><!-- This is for the Room Name --></h1>
+          <a class="btn btn-primary btn-block" href="/index.html">Change Username or Room</a>
+          <br />
+          <div class="well">
+          <ul class="messages list-group">
+            <!-- Received Messages Here -->
+          </ul>
 
-    <form id="message-form">
-      <input type="text" name="message" placeholder="Type your Message here..." />
-      <input type="submit" />
-    </form>
+          <form id="message-form">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                <input type="text" name="message" placeholder="Type your Message here..." class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success btn-lg btn-block" />
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="/js/jquery-2.2.2.min.js"></script>
     <script src="/js/socket.io-1.3.7.js"></script>  

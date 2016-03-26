@@ -3,7 +3,7 @@ var name = getQueryVariable('name') || 'Anonymous'
 var socket = io()
 
 console.log(`${name} wants to join ${room}`)
-$('.room-title').text(room)
+$('.room-title').text(`${room} room`)
 
 socket.on('connect', function () {
   console.log('Connected to socket.io server')
@@ -16,13 +16,14 @@ socket.on('connect', function () {
 
 socket.on('message', function (message) {
   var momentTimestamp = moment.utc(message.timestamp)
-  var $message = $('.messages')
+  var $messages = $('.messages')
+  var $message = $('<li class="list-group-item"></li>')
   console.log('New Message:')
   console.log(message.text)
 
   $message.append(
     `<p><em>${momentTimestamp.local().format('h:mma')}</em> <strong>${message.name}</strong>: ${message.text}</p>`)
-
+  $messages.append($message)
 })
 
 // New message submission
